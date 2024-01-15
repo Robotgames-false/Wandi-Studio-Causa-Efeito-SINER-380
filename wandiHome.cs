@@ -7,7 +7,7 @@ public class wandiHome : MonoBehaviour
     public string carregarSistema;
     public int startSistemaNumber;
     public float esperarPraEntrar;
-    // Start is called before the first frame update.
+    // Start is called before the first frame update..
     void Start()
     {
         
@@ -17,7 +17,7 @@ public class wandiHome : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyUp(KeyCode.Space)){
-            StartCoroutine((processEntrySystem));
+            StartCoroutine(processEntrySystem());
         }
     }
 

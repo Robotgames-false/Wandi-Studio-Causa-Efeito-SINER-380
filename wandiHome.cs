@@ -32,4 +32,8 @@ public class wandiHome : MonoBehaviour
     public void loadNumberSistema(){
         Application.LoadLevel(startSistemaNumber);
     }
+
+    public void encerrarSoftware(){
+        Application.Quit();
+    }
 }

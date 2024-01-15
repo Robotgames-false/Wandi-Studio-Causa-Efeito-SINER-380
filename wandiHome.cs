@@ -5,8 +5,8 @@ using UnityEngine;
 public class wandiHome : MonoBehaviour
 {
     public string carregarSistema;
-
     public int startSistemaNumber;
+    public float esperarPraEntrar;
     // Start is called before the first frame update.
     void Start()
     {
@@ -17,7 +17,7 @@ public class wandiHome : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyUp(KeyCode.Space)){
-            Application.LoadLevel(carregarSistema);
+            StartCoroutine((processEntrySystem));
         }
     }
 
@@ -35,5 +35,11 @@ public class wandiHome : MonoBehaviour
 
     public void encerrarSoftware(){
         Application.Quit();
+    }
+
+    IEnumerator processEntrySystem(){
+        yield return new WaitForSeconds(esperarPraEntrar);
+        Application.LoadLevel(carregarSistema);
+
     }
 }

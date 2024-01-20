@@ -33,7 +33,7 @@ public class arm : MonoBehaviour
     public float arm2ZMin = -45f;
     public float arm2ZMax = 45.0f;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update:
     void Start()
     {
         sliderBase.minValue = -1;

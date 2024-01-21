@@ -443,121 +443,13 @@ public class quaternion : MonoBehaviour
         floatJ4.text = "J4 Repouso: " + yieldJ4.ToString("F2");
         floatJ5.text = "J5 Repouso: " + yieldJ5.ToString("F2");
 
-        /*
-        if (serialPort.IsOpen)
-        {
-            try
-            {
-
-                //Receber carta de amor do arduino.
-                mensagem = serialPort.ReadLine();
-                 //Se a mensagem na carta de amor do arduino constar "botaoblalbalbla" e a booleana do botão especifico estiver ativa.
-                    //Mover J1
-                    if(mensagem.Contains("botao01Pressionado") && toggleJ1.isOn)
-                {
-                    //Botoes, um para valor minimo e outro pra maximo, diferentes direcçoes!
-                    UpdateJ1Min();
-                    Debug.Log("botao01Pressionado");
-                }
-                    if(mensagem.Contains("botao02Pressionado") && toggleJ1.isOn)
-                {
-                    //.Botoes, um para valor minimo e outro pra maximo, diferentes direcçoes!
-                    UpdateJ1Max();
-                     Debug.Log("botao02Pressionado");
-                }
-
-
-                    //Mover J2
-                    if(mensagem.Contains("botao01Pressionado") && toggleJ2.isOn)
-                {
-                    //Botoes, um para valor minimo e outro pra maximo, diferentes direcçoes!
-                    UpdateJ2Min();
-                    Debug.Log("botao01Pressionado");
-                }
-                    if(mensagem.Contains("botao02Pressionado") && toggleJ2.isOn)
-                {
-                    //Botoes, um para valor minimo e outro pra maximo, diferentes direcçoes!
-                    UpdateJ2Max();
-                     Debug.Log("botao02Pressionado");
-                }
-
-
-                    //Mover J3
-                    if(mensagem.Contains("botao01Pressionado") && toggleJ3.isOn)
-                {
-                    //Botoes, um para valor minimo e outro pra maximo, diferentes direcçoes!
-                    UpdateJ3Min();
-                    Debug.Log("botao01Pressionado");
-                }
-                    if(mensagem.Contains("botao02Pressionado") && toggleJ3.isOn)
-                {
-                    //Botoes, um para valor minimo e outro pra maximo, diferentes direcçoes!
-                    UpdateJ3Max();
-                     Debug.Log("botao02Pressionado");
-                }
-
-
-                    //Mover J4
-                    if(mensagem.Contains("botao01Pressionado") && toggleJ4.isOn)
-                {
-                    //Botoes, um para valor minimo e outro pra maximo, diferentes direcçoes!
-                    UpdateJ4Min();
-                    Debug.Log("botao01Pressionado");
-                }
-                    if(mensagem.Contains("botao02Pressionado") && toggleJ4.isOn)
-                {
-                    //Botoes, um para valor minimo e outro pra maximo, diferentes direcçoes!
-                    UpdateJ4Max();
-                     Debug.Log("botao02Pressionado");
-                }
-
-
-                    //Mover J5
-                    if(mensagem.Contains("botao01Pressionado") && toggleJ5.isOn)
-                {
-                    //Botoes, um para valor minimo e outro pra maximo, diferentes direcçoes!
-                    UpdateJ5Min();
-                    Debug.Log("botao01Pressionado");
-                }
-                    if(mensagem.Contains("botao02Pressionado") && toggleJ5.isOn)
-                {
-                    //Botoes, um para valor minimo e outro pra maximo, diferentes direcçoes!
-                    UpdateJ5Max();
-                     Debug.Log("botao02Pressionado");
-                }
-
-
-                //Lidando com carta de amor pra colocar e tirar da tela, metodo clãssico de limpar string pra dar um ar atualizado kkk
-                 if(mensagem.Contains("botao01Pressionado") && toggleJ1.isOn)
-                {
-                    messageLove.text = "Botão Negativo Pressionado";
-                }
-                    else if(mensagem.Contains("botao02Pressionado") && toggleJ1.isOn)
-                {
-                    messageLove.text = "Botão Positivo Pressionado";
-                }
-                else
-                {
-                    messageLove.text = "Arduino Love Card";
-                }
-  
-
-            }
-            
-                catch (System.Exception)
-            {
-                throw;
-            }
-        }
-        */
-  
     //Se sair do programa fecha a porta.
       void OnApplicationQuit() 
     {
         serialPort.Close();
     }
 
-    }
+}
     
     //Atualização das nossas operaçoes pra rotacionar o objecto!
     //primeiro o valor do slider recebe o valor do slider do input no UI do usuario

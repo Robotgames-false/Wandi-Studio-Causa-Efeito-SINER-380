@@ -412,24 +412,6 @@ public class quaternion : MonoBehaviour
         }
 
 
-        /*/Pra receber automatação dos loops do arduino e exeutar os metodos na unity.
-        if (mensagem.Contains("FORJ1MIN"))
-        {
-            UpdateJ1Min();
-        }
-        else if(mensagem.Contains("FORJ1MAX")){
-            UpdateJ1Max();
-        }
-
-        if (mensagem.Contains("FORJ2MIN"))
-        {
-            UpdateJ2Min();
-        }
-        else if(mensagem.Contains("FORJ2MAX")){
-            UpdateJ2Max();
-        }
-        */
-
         //o texto do angulo J da UI vai receber a string concatenada com o progresso do seu angulo.
         anguloJ1.text = "Angulo J1.Y: " + RotationJ1Y.ToString("F3");
         anguloJ2.text = "Angulo J2.Z: " + RotationJ2Z.ToString("F3");

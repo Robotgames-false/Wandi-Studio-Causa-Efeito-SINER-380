@@ -1,1 +1,0 @@
-# Wandi-Studio-Causa-Efeito-SINER

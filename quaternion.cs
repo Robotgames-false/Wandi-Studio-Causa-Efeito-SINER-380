@@ -654,7 +654,7 @@ public class quaternion : MonoBehaviour
         }
     }
 
-     //Aqui estão aqueles que serão usados pelo evento de clique nos botões lá no insepector já que as cortinas não são os tipos de meotodos pra serem cahamados do Inspector.
+     //Aqui estão aqueles, que serão usados pelo evento de clique nos botões lá no insepector já que as cortinas não são os tipos de meotodos pra serem cahamados do Inspector.
 
     public void ativarJunta1()
     {

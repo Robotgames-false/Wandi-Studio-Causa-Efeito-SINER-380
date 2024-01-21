@@ -317,6 +317,8 @@ public class quaternion : MonoBehaviour
         painelConfigPort.SetActive(false);
     }
 
+
+
     public void OpenControleButton(){
         painelControleButtons.SetActive(true);
         painelControleSlider.SetActive(false);
@@ -333,21 +335,6 @@ public class quaternion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (serialPort.IsOpen)
-        {
-            if(Input.GetKeyDown(KeyCode.Space)){
-            try
-            {
-                serialPort.Write("A");
-                Debug.Log("A fOR aRDUINO");
-            }
-            catch (System.Exception)
-            {
-                
-                throw;
-            }
-        }
-    }
        
         //VALORES MAXIMOS MINIMOS DOS SLIDERS NA UI DE CADA JUNTA, ESSE VALOR É DO MOVIMENTO * VELCOCIDADE.
         sliderJ1.minValue = -1;
@@ -456,6 +443,7 @@ public class quaternion : MonoBehaviour
         floatJ4.text = "J4 Repouso: " + yieldJ4.ToString("F2");
         floatJ5.text = "J5 Repouso: " + yieldJ5.ToString("F2");
 
+        /*
         if (serialPort.IsOpen)
         {
             try
@@ -561,34 +549,7 @@ public class quaternion : MonoBehaviour
                 throw;
             }
         }
-
-        //Enviar Carta de amor pra arduino.
-         if(serialPort.IsOpen && RotationJ1Y < 0){
-            try
-            {
-                serialPort.Write("C");
-            }
-            catch (System.Exception)
-            {
-                
-                throw;
-            }
-        }
-        else if (serialPort.IsOpen && RotationJ1Y > 0)
-        {
-             try
-            {
-                serialPort.Write("B");
-            }
-            catch (System.Exception)
-            {
-                
-                throw;
-            }
-        }
-
-        //Loops
-
+        */
   
     //Se sair do programa fecha a porta.
       void OnApplicationQuit() 
@@ -909,61 +870,7 @@ public class quaternion : MonoBehaviour
     updateJ5Max.isOn = true;
     yield return new WaitForSeconds(yieldJ5);   
     }
-  }
 
-  public float number;
+}
   
-
-  public void limitesDropdown(){
-            switch (limitesDropdownJ1.value)
-        {
-            case 0:
-            Debug.Log($"10, {number}");
-            break;
-            J1Min = -10;
-            J1Max = 10;
-            case 1:
-            Debug.Log("20");
-            J2Min = -20;
-            J2Min = 20;
-            break;
-
-            case 2:
-            Debug.Log("30");
-            J3Min = -30;
-            J3Max = 30;
-            break;
-            
-            case 3:
-            Debug.Log("40");
-           
-            break;
-
-            case 4:
-            Debug.Log("50");
-            
-            break;
-            
-            case 5:
-            Debug.Log("60");
-           
-            break;
-
-            case 6:
-            Debug.Log("70");
-           
-            break;
-            
-            case 7:
-            Debug.Log("80");
-           
-            break;
-
-            case 8:
-            Debug.Log("90");
-           
-            break;
-        }
-
-  }
 }
